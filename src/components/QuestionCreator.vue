@@ -48,8 +48,9 @@
         </button>
       </div>
     </div>
-    <p v-if="question">{{ question }}</p>
-    <div class="question__insights" v-if="answer">
+
+    <div class="question__insights" v-if="answer && question">
+      <p>{{ question }}</p>
       <div v-if="answer === 'short'">
         <input
           type="text"
@@ -75,6 +76,7 @@
           {{ answer }}
         </label>
       </div>
+      <button type="button">Add To Form</button>
     </div>
   </section>
 </template>
